@@ -6,6 +6,9 @@
   <title>Your Name | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
@@ -16,6 +19,7 @@
       <nav>
         <ul class="flex space-x-6">
           <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
           <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
           <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
         </ul>
@@ -27,7 +31,7 @@
   <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-100 to-blue-50">
     <img src="https://via.placeholder.com/150" alt="Profile" class="rounded-full border-4 border-blue-600 w-40 h-40 mb-6">
     <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Your Name</h2>
-    <p class="text-lg text-gray-600 mb-6">Engineering Student | Developer | Innovator</p>
+    <p class="text-lg text-gray-600 mb-6">4th-Year Engineering Student | Developer | Hardware Innovator</p>
     <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">View My Work</a>
   </section>
 
@@ -35,30 +39,54 @@
   <section id="about" class="py-20 container mx-auto px-6 text-center">
     <h3 class="text-3xl font-bold mb-6">About Me</h3>
     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-      I'm a 4th-year engineering student passionate about building innovative hardware and software solutions. 
-      I enjoy designing impactful systems and learning new technologies to create solutions that matter.
+      I'm a 4th-year engineering student passionate about hardware and software solutions that make life easier for students, teachers, and staff.
+      I specialize in electronics, IoT, and embedded systems, and I enjoy turning innovative ideas into real-world solutions.
     </p>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-10">My Skills</h3>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">HTML</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">CSS</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <i class="fab fa-js text-5xl text-yellow-500 mb-4"></i>
+          <h4 class="text-xl font-semibold">JavaScript</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <i class="fas fa-microchip text-5xl text-gray-600 mb-4"></i>
+          <h4 class="text-xl font-semibold">Electronics & IoT</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-100">
+  <section id="projects" class="py-20">
     <div class="container mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold mb-10">My Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Project Card -->
         <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
           <h4 class="text-xl font-semibold mb-2">Digital Locker System</h4>
-          <p class="text-gray-600 mb-4">An RFID-based system for lab equipment management with alarm and tag vending features.</p>
+          <p class="text-gray-600 mb-4">An RFID-based lab equipment management system with vending machine tags and alarm.</p>
           <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
           <h4 class="text-xl font-semibold mb-2">IoT Smart Home</h4>
-          <p class="text-gray-600 mb-4">A home automation project with IoT sensors and voice assistant integration.</p>
+          <p class="text-gray-600 mb-4">Home automation system using IoT sensors with voice assistant integration.</p>
           <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
           <h4 class="text-xl font-semibold mb-2">Portfolio Website</h4>
-          <p class="text-gray-600 mb-4">A responsive personal portfolio website showcasing my skills and work.</p>
+          <p class="text-gray-600 mb-4">A responsive portfolio website showcasing my projects and skills.</p>
           <a href="#" class="text-blue-600 font-semibold hover:underline">View Project</a>
         </div>
       </div>
@@ -66,13 +94,16 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 container mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
-    <p class="text-lg text-gray-600 mb-6">Have a question or want to collaborate? Let's talk!</p>
-    <div class="flex justify-center space-x-6">
-      <a href="mailto:youremail@example.com" class="text-blue-600 text-2xl"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/yourusername" class="text-gray-700 text-2xl"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/yourusername" class="text-blue-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="text-lg text-gray-600 mb-6">Want to collaborate or ask a question? Get in touch!</p>
+      <form action="https://formspree.io/f/mayvbkzg" method="POST" class="max-w-xl mx-auto">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 mb-4 border rounded" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded" required>
+        <textarea name="message" rows="5" placeholder="Your Message" class="w-full p-3 mb-4 border rounded" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+      </form>
     </div>
   </section>
 
